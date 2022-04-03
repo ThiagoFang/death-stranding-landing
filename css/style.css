@@ -34,15 +34,29 @@ body {
     background-color: #CCC;
 }
 
-/* MAIN AREA */
+/* SCROLL BAR */
+body::-webkit-scrollbar {
+    width: 17px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #111;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #111;    
+    border-radius: 20px;
+    border: 1px solid #333;
+  }
 
+/* MAIN AREA */
 #main-banner{
     display: flex;
     height: 100vh;
     background-image: url(../assets/img/background_blur.jpg);
     background-position: center;
     background-size: cover;
-    padding: 30px 30px 0 30px;
+    padding: 50px 0 0 0;
 }
 
 .main-area{
@@ -51,7 +65,6 @@ body {
     align-items: center;
     justify-content: center;
     width: 50%;
-    padding: 30px;
 }
 
 .game-logo{
@@ -76,10 +89,11 @@ body {
     overflow: hidden;
 }
 
-.main-image .sam-image{
-    width: 90%;
+.sam-image{
+    width: 85%;
 }
 
+/*QUOTE AREA*/
 #quote{
     display: flex;
     justify-content: center;
@@ -88,6 +102,8 @@ body {
     height: 200px;
 }
 
+
+/* TRAILER AREA */
 #trailer-area{
     display: flex;
     height: 500px;
@@ -99,7 +115,7 @@ body {
     align-items: center;
     justify-content: center;
     flex: 1;
-    background: linear-gradient(-90deg, #000000 0%, rgba(0, 0, 0, 0.46) 103.4%);;
+    background: linear-gradient(-90deg, #000000 0%, rgba(0, 0, 0, 0.46) 103.4%);
 }
 
 .video-background {
@@ -114,9 +130,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #000;
-    width: 30%;
+    width: 35%;
     text-align: center;
-    padding: 40px;
+    padding: 60px;
 }
 
 .video-info-title {
@@ -136,6 +152,193 @@ body {
     margin-top: 10px;
 }
 
+
+/* FOOTER AREA */
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-text {
+    color: #CCC;
+    margin-bottom: 10px;
+}
+
+/* MEDIA */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .button{
+        padding: 10px 20px;
+    }
+    .main-area{
+        width: 45%;
+        padding: 0;
+        align-items: center;
+    }
+    .game-logo{
+        width: 80%;
+    }
+    .game-creator{
+        font-size: 14px;
+    }
+
+    .main-image{
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;  
+    }
+    .sam-image {
+        width: auto;
+        height: 90%;
+    }
+
+
+
+    .video-area{
+        overflow: hidden;
+    }
+
+    .video-background {
+        width: auto;
+        height: 100%;
+    }
+    
+    .video-info{
+        width: 40%;
+    }
+}
+
+@media (min-width: 426)  and (max-width: 768px) {
+    .button{
+        padding: 10px 20px;
+        font-size: 28px;
+    }
+
+    #main-banner {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .main-area{
+        justify-content: end;
+        width: 50%;
+        height: 60%;
+    }
+    .game-logo{
+        width: 90%;
+    }
+    .game-creator{
+        font-size: 12px;
+        width: 60%;
+        margin: 10px 0;
+    }
+
+
+    .main-image {
+        flex: 1;
+    }
+    .sam-image{
+        width: auto;
+        height: 100%;
+    }
+
+    .video-area{
+        overflow: hidden;
+    }
+    .video-background{
+        width: auto;
+        height: 100%;
+    }
+
+    .video-info{
+        width: 50%;
+    }
+    .video-info-title{
+        font-size: 32px;
+    }
+    .video-info-text{
+        font-size: 14px;
+    }
+    .video-btn{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 425px) {
+    .button{
+        padding: 7px 10px;
+        font-size: 16px;
+    }
+
+    #main-banner {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .main-area{
+        justify-content: end;
+        width: 85%;
+        height: 60%;
+    }
+    .game-logo{
+        width: 100%;
+    }
+    .game-creator{
+        font-size: 11px;
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .main-image {
+        flex: 1;
+    }
+    .sam-image{
+        width: auto;
+        height: 100%;
+    }
+
+    #quote h1{
+        font-size: 18px;
+    }
+
+
+    #trailer-area{
+        flex-direction: column;
+    }
+    .video-area{
+        overflow: hidden;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .video-background{
+        width: 100%;
+        height: auto;
+    }
+
+    .video-info{
+        width: 100%;
+        height: 65%;
+        padding: 20px;
+    }
+    .video-info-title{
+        font-size: 28px;
+    }
+    .video-info-text{
+        font-size: 12px;
+    }
+    .video-btn{
+        font-size: 14px;
+    }
+
+    #footer{
+        font-size: 12px;
+    }
+}
 
 
 
