@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
 }
 
 .sam-image{
-    width: 85%;
+    height: 100%;
 }
 
 /*QUOTE AREA*/
@@ -243,8 +243,8 @@ body::-webkit-scrollbar {
         flex: 1;
     }
     .sam-image{
-        width: auto;
-        height: 100%;
+        width: 40%;
+        height: auto;
     }
 
     .video-area{
